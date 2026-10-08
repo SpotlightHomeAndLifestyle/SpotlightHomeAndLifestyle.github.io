@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="Read what clients have to say about Spotlight Home & Lifestyle. Discover experiences from homeowners who have worked with us on renovations, design and home improvement projects.">
+
+  <title>Spotlight Home & Lifestyle</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/spotlight.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+  <style>
+
+    /* =========================================
+       TESTIMONIAL HERO
+    ========================================= */
+
+    .testimonial-hero {
+      position: relative;
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("spotlight-addition-project.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 190px 0 130px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .testimonial-hero h1 {
+      font-size: 46px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      letter-spacing: .5px;
+    }
+
+    .testimonial-hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #fff;
+    }
+
+
+    /* =========================================
+       INTRO
+    ========================================= */
+
+    .testimonial-intro {
+      padding: 90px 0 60px;
+      text-align: center;
+    }
+
+    .testimonial-intro .section-heading {
+      margin-bottom: 25px;
+    }
+
+    .testimonial-intro .section-heading span {
+      color: #a4c639;
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .testimonial-intro h2 {
+      font-size: 34px;
+      font-weight: 600;
+      color: #1e1e1e;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-intro p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #666;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+
+    /* =========================================
+       TESTIMONIAL CARDS
+    ========================================= */
+
+    .testimonial-section {
+      padding: 30px 0 100px;
+      background: #f7f7f7;
+    }
+
+    .testimonial-card {
+      height: 100%;
+      background: #fff;
+      padding: 45px 40px;
+      margin-bottom: 30px;
+      position: relative;
+      border: 1px solid #eeeeee;
+      transition: all .3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(0,0,0,.08);
+    }
+
+    .testimonial-quote {
+      font-size: 65px;
+      line-height: 1;
+      color: #a4c639;
+      font-family: Georgia, serif;
+      height: 55px;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card p {
+      color: #666;
+      font-size: 15px;
+      line-height: 1.9;
+      margin-bottom: 30px;
+    }
+
+    .testimonial-client {
+      border-top: 1px solid #eeeeee;
+      padding-top: 18px;
+    }
+
+    .testimonial-client strong {
+      color: #222;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .testimonial-client span {
+      display: block;
+      color: #999;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+
+    /* =========================================
+       FEATURED TESTIMONIAL
+    ========================================= */
+
+    .featured-testimonial {
+      background: #202020;
+      color: #fff;
+      padding: 70px 50px;
+      margin: 20px 0 70px;
+      text-align: center;
+    }
+
+    .featured-testimonial .testimonial-quote {
+      color: #a4c639;
+    }
+
+    .featured-testimonial p {
+      max-width: 850px;
+      margin: 0 auto 25px;
+      color: #fff;
+      font-size: 19px;
+      line-height: 1.9;
+    }
+
+    .featured-testimonial strong {
+      color: #fff;
+      font-size: 15px;
+    }
+
+
+    /* =========================================
+       CTA
+    ========================================= */
+
+    .testimonial-cta {
+      padding: 90px 0;
+      text-align: center;
+      background: #fff;
+    }
+
+    .testimonial-cta h2 {
+      font-size: 34px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .testimonial-cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .testimonial-cta .filled-button {
+      display: inline-block;
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 767px) {
+
+      .testimonial-hero {
+        padding: 140px 20px 100px;
+      }
+
+      .testimonial-hero h1 {
+        font-size: 32px;
+      }
+
+      .testimonial-hero p {
+        font-size: 15px;
+      }
+
+      .testimonial-intro {
+        padding: 65px 20px 40px;
+      }
+
+      .testimonial-intro h2 {
+        font-size: 28px;
+      }
+
+      .testimonial-section {
+        padding: 20px 15px 60px;
+      }
+
+      .testimonial-card {
+        padding: 35px 25px;
+      }
+
+      .featured-testimonial {
+        padding: 50px 25px;
+        margin-bottom: 50px;
+      }
+
+      .featured-testimonial p {
+        font-size: 16px;
+      }
+
+      .testimonial-cta {
+        padding: 65px 20px;
+      }
+
+      .testimonial-cta h2 {
+        font-size: 28px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+<!-- =========================================
+     PRELOADER
+========================================= -->
+
+<div id="preloader">
+  <div class="jumper">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+  <nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+
+      <a class="navbar-brand" href="index.html">
+        <img
+          src="spotlight-logo-long.PNG"
+          alt="Spotlight Home & Lifestyle"
+          style="max-width:250px; max-height:400px;">
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="about-spotlight.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="spotlight-projects.html">Portfolio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="spotlight-team.html">Our Team</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="spotlight-testimonials.html">Testimonials</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact-spotlight.html">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="testimonial-hero">
+
+  <div class="container">
+
+    <h1>Client Experiences</h1>
+
+    <p>
+      The renovation is the result. The experience is the product.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================================
+     TESTIMONIALS
+========================================= -->
+
+<section class="testimonial-section">
+
+  <div class="container">
+
+    <div class="row">
+
+
+      <!-- TESTIMONIAL 1 -->
+
+      <div class="col-lg-6 col-md-6">
+
+        <div class="testimonial-card">
+
+          <div class="testimonial-quote">
+            “
+          </div>
+
+          <p>
+        We chose Spotlight to build a sunroom addition to our cottage in Buckhorn, and it turned out better than we could have ever imagined. Matt managed the overall processed transparently and professionally. We always felt in the loop and confident everything was under control, as we were often not in the area as the build was taking place. Their project management software is a great tool to follow the process.
+
+We also really appreciated the quoting process. Not once was I ever scared the costs would run out of control! The way they approach that is 10/10.
+
+And the employees who were on-site building were fantastic. Polite, respectful, and friendly the whole time. And of course, extremely skilled in their trades.
+
+It was the most stress-free construction project I've ever undertaken and I couldn't recommend them more!
+          </p>
+
+          <div class="testimonial-client">
+
+            <strong>Teresa M</strong>
+
+            <span>Cottage Renovation</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- TESTIMONIAL 2 -->
+
+      <div class="col-lg-6 col-md-6">
+
+        <div class="testimonial-card">
+
+          <div class="testimonial-quote">
+            “
+          </div>
+
+          <p>
+    After a fire in our home, we took the opportunity to make some changes. So we needed a firm that could handle both restoration and renovation. We interviewed several firms and choosing Spotlight Home and Lifestyle was easy.
+
+At our first meeting with Garnet Northey, we shared our wish list, and were impressed with his professionalism, knowledge and efforts to determine what was most important to us. After all, he said, it’s our home and we are the ones who have to be happy. This philosophy continued during the entire project.
+
+Our experience with every person on our Spotlight team was excellent. Everyone working on our project was always available to answer our questions, provide us with helpful advice, and keep us updated as work progressed.
+
+Every promise was kept. All work was done to the highest level.
+
+And now…we are already talking about the next project Spotlight can handle for
+          </p>
+
+          <div class="testimonial-client">
+
+            <strong>Toba L</strong>
+
+            <span>Custom Home Build</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- TESTIMONIAL 3 -->
+
+      <div class="col-lg-6 col-md-6">
+
+        <div class="testimonial-card">
+
+          <div class="testimonial-quote">
+            “
+          </div>
+
+          <p>
+         If I could I'd leave 10 stars! Spotlight Home & Lifestyle gutted and completely renovated our basement to transform it in to my soap studio and their work is phenomenal.
+The whole work crew was extremely professional, clean and worked hard. They completed the job in our time frame and worked hard to make sure our vision came to life. Now I walk into my basement/studio and feel so fortunate and blessed to have everything I envisioned for years come to life.
+We highly recommend Spotlight for anyone looking for renovation work! Spotlight is a company that completely prides on their work and ensure it is done to their standards and the home owners standards. We really appreciated that after dealing with other companies that just focused on getting the job done as fast as possible and not doing the job properly. It was a breath of fresh air with this company and we will be returning customers!
+          </p>
+
+          <div class="testimonial-client">
+
+            <strong>Serena & Derek</strong>
+
+            <span>Basement Renovation</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+            <!-- TESTIMONIAL 4 -->
+
+      <div class="col-lg-6 col-md-6">
+
+        <div class="testimonial-card">
+
+          <div class="testimonial-quote">
+            “
+          </div>
+
+          <p>
+            Last year we made the decision to move from the city and turn the cottage we had owned for 20 years into our full time home. We initially selected Spotlight Home and Lifestyle to handle the renovation based on Matt's clear communication style and processes. We knew what we were getting into based on the detailed contract and transparent change order process.
+
+            What delighted us in the end was the dedicated team who worked on our home and the utter quality and attention to detail in their work. We couldn't be happier with the result.
+          </p>
+
+          <div class="testimonial-client">
+            <strong>Terri M</strong>
+            <span>Renovation</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div> 
+
+  </div> 
+
+</section> 
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="testimonial-cta">
+
+  <div class="container">
+
+    <h2>Ready to Start Your Project?</h2>
+
+    <p>
+      Have a renovation, design or building project in mind?
+      Let's start the conversation and explore what's possible.
+    </p>
+
+    <a href="contact-spotlight.html" class="filled-button">
+      LET'S TALK ABOUT YOUR PROJECT
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="row">
+
+
+      <div class="col-md-3 footer-item">
+
+        <img
+          src="spotlight logo.JPG"
+          alt="Spotlight Home & Lifestyle Logo"
+          style="max-width:200px; max-height:250px;">
+
+        <p>Design | Renovate | Build</p>
+
+   <ul class="social-icons">
+  <li>
+    <a rel="nofollow" href="https://www.facebook.com/spotlighthomeandlifestyle" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </li>
+
+  <li>
+    <a href="https://www.instagram.com/spotlighthomeandlifestyle?stkn=MXFjdmdoZDBtM3pxMg==">
+      <i class="fa fa-instagram"></i>
+    </a>
+  </li>
+
+  <li>
+    <a href="https://share.google/CDrPjOCN7Ba2OfGo3">
+      <i class="fa fa-google"></i>
+    </a>
+  </li>
+
+
+
+</ul>
+
+      </div>
+
+
+      <div class="col-md-3 footer-item">
+
+        <h4>Menu</h4>
+
+        <ul class="menu-list">
+
+          <li>
+            <a href="about-spotlight.html">About</a>
+          </li>
+
+          <li>
+            <a href="spotlight-projects.html">Portfolio</a>
+          </li>
+
+          <li>
+            <a href="spotlight-team.html">Our Team</a>
+          </li>
+
+          <li>
+            <a href="spotlight-testimonials.html">Testimonials</a>
+          </li>
+
+          <li>
+            <a href="contact-spotlight.html">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      
+
+</footer>
+
+
+
+<!-- =========================================
+     SUB FOOTER
+========================================= -->
+
+<div class="sub-footer">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <p>
+          Copyright &copy; Spotlight Home & Lifestyle
+          - Design: Pazey Coding
+        </p>
+
+      </div>
+
+   
+
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="js/custom.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/accordions.js"></script>
+
+
+</body>
+</html>
