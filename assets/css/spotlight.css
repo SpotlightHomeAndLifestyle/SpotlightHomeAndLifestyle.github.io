@@ -2977,6 +2977,35 @@ gap: 10px;
   display: none !important;
 }
 
+/* Remove the dark bar between slideshow and thumbnails */
+.slideshow-wrapper {
+  background: transparent !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.main-slide {
+  display: block;
+  margin-bottom: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.slide-caption {
+  display: none !important;
+}
+
+.thumbnail-wrapper {
+  background: transparent !important;
+  margin-top: 10px !important;
+  padding-top: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
 
 
 
