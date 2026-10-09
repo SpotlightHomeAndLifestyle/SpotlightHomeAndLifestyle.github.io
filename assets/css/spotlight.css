@@ -2718,6 +2718,81 @@ gap: 10px;
     height: auto;
   }
 }
+/* Request a Consultation Navigation Button */
+.consultation-nav-item {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+
+
+.consultation-nav-btn {
+  display: inline-block;
+  background-color: #828C65;
+  color: #ffffff !important;
+  padding: 25px 40px;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none !important;
+  white-space: nowrap;
+  line-height: 1.4;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+.consultation-nav-btn:hover {
+  background-color: #828C65;
+  color: #ffffff !important;
+}
+
+/* Mobile Navigation */
+@media (max-width: 991px) {
+  .consultation-nav-item {
+    margin: 10px 0 12px;
+    display: block;
+  }
+
+  .consultation-nav-btn {
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+
+/* Keep all navigation items on one line */
+@media (min-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-link {
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .consultation-nav-item {
+    margin-left: 8px;
+    flex-shrink: 0;
+  }
+
+  .consultation-nav-btn {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .navbar-brand img {
+    max-width: 220px !important;
+  }
+}
 
 
 
