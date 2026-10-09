@@ -1,401 +1,753 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="TemplateMo">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <meta name="description" content="Explore a structural renewal and cottage refresh by Spotlight Home & Lifestyle in the Kawarthas, featuring structural repairs, levelled floors, updated flooring, a refreshed fireplace and thoughtful interior improvements.">
 
-    <title>Spotlight Home & Lifestyle</title>
+  <meta name="author" content="Spotlight Home & Lifestyle">
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <title>Structural Renewal & Cottage Refresh | Spotlight Home</title>
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/spotlight.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-   
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
+  <!-- Bootstrap CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  </head>
+  <!-- Additional CSS -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/spotlight.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
 
-  <body>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Structural Renewal & Cottage Refresh | Spotlight Home">
+  <meta property="og:description" content="Structural repairs and thoughtful interior updates come together in this cottage transformation by Spotlight Home & Lifestyle.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spotlighthomeandlifestyle.github.io/structural-renewal.html">
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
+  <style>
+    /* PROJECT LAYOUT */
+
+    .portfolio-project {
+      padding: 80px 0;
+    }
+
+    .project-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.4fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .project-description {
+      min-width: 0;
+    }
+
+    .project-description h2 {
+      color: #828C65;
+      font-size: 28px;
+      line-height: 1.4;
+      margin-bottom: 25px;
+    }
+
+    .project-description p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .project-slideshow {
+      min-width: 0;
+      width: 100%;
+    }
+
+    .slideshow-wrapper {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* MAIN SLIDE */
+
+    .main-slide {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background: #f4f4f1;
+      aspect-ratio: 4 / 3;
+    }
+
+    .main-slide > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .slide-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 35px 20px 18px;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0)
+      );
+      pointer-events: none;
+    }
+
+    .slide-caption h2 {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      margin: 0;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    /* SLIDESHOW ARROWS */
+
+    .slide-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+    }
+
+    .slide-arrow:hover {
+      background: #828C65;
+      color: #fff;
+    }
+
+    .slide-arrow.prev {
+      left: 15px;
+    }
+
+    .slide-arrow.next {
+      right: 15px;
+    }
+
+    /* THUMBNAILS */
+
+    .thumbnail-wrapper {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+      width: 100%;
+    }
+
+    .thumbnail {
+      width: 100%;
+      min-width: 0;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      opacity: 0.72;
+      transition: opacity 0.2s ease, border-color 0.2s ease;
+    }
+
+    .thumbnail img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thumbnail:hover {
+      opacity: 1;
+    }
+
+    .thumbnail.active {
+      border-color: #828C65;
+      opacity: 1;
+    }
+
+    /* NAVIGATION CTA */
+
+    .consultation-nav-item {
+      display: flex;
+      align-items: center;
+      margin-left: 12px;
+    }
+
+    .consultation-nav-btn {
+      display: inline-block;
+      background: #828C65;
+      color: #fff !important;
+      padding: 12px 18px;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .consultation-nav-btn:hover {
+      background: #69734f;
+      color: #fff !important;
+    }
+
+    /* RESPONSIVE LAYOUT */
+
+    @media (max-width: 991px) {
+      .consultation-nav-item {
+        margin: 10px 0;
+        align-items: flex-start;
+      }
+
+      .project-layout {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 25px;
+      }
+
+      .project-description h2 {
+        font-size: 24px;
+      }
+
+      .thumbnail-wrapper {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .portfolio-project {
+        padding: 40px 0 55px;
+      }
+
+      .project-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .project-description {
+        order: 1;
+        width: 100%;
+      }
+
+      .project-slideshow {
+        order: 2;
+        width: 100%;
+      }
+
+      .project-description h2 {
+        font-size: 25px;
+        margin-bottom: 18px;
+      }
+
+      .project-description p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 16px;
+      }
+
+      .main-slide {
+        aspect-ratio: 4 / 3;
+      }
+
+      .slide-arrow {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+      }
+
+      .slide-arrow.prev {
+        left: 10px;
+      }
+
+      .slide-arrow.next {
+        right: 10px;
+      }
+
+      .slide-caption h2 {
+        font-size: 18px;
+      }
+
+      .thumbnail-wrapper {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .thumbnail-wrapper {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="spotlight-logo-long.PNG"
+            alt="Spotlight Home & Lifestyle"
+            style="max-width: 250px; max-height: 400px;"
+          >
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="about-spotlight.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="spotlight-projects.html">Portfolio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="spotlight-team.html">Our Team</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="spotlight-testimonials.html">Testimonials</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact-spotlight.html">Contact</a>
+            </li>
+
+            <li class="nav-item consultation-nav-item">
+              <a class="consultation-nav-btn" href="contact-spotlight.html">
+                Request a Consultation
+              </a>
+            </li>
+
+          </ul>
         </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
+      </div>
+    </nav>
+  </header>
 
-
-
-    <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><img src="spotlight-logo-long.PNG" style="max-width: 250px; max-height: 400px;"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-            
-            
-              <li class="nav-item">
-                <a class="nav-link" href="about-spotlight.html">About</a>
-              </li>  
-              <li class="nav-item">
-                <a class="nav-link" href="spotlight-projects.html">Portfolio</a>
-              </li>                          
-              <li class="nav-item">
-                <a class="nav-link" href="spotlight-team.html">Our Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="spotlight-testimonials.html">Testimonials</a>
-              </li>
-                  <li class="nav-item">
-                <a class="nav-link" href="contact-spotlight.html">Contact</a>
-              </li>
-            </ul>
-          </div>
+  <!-- PAGE HEADING -->
+  <div class="page-heading3 header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Structural Renewal & Cottage Refresh</h1>
         </div>
-      </nav>
-      
-    </header>
-
-
-   <!-- Page Content -->
-
-<!-- Portfolio Heading -->
-<div class="page-heading3 header-text">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Structural Renewal & Cottage Refresh
-
-</h1>
-
       </div>
     </div>
   </div>
-</div>
 
-<!-- Portfolio Slideshow -->
-<section class="portfolio-slideshow">
-  <div class="container">
+  <!-- PROJECT DESCRIPTION + SLIDESHOW -->
+  <section class="portfolio-project">
+    <div class="container">
 
-    <div class="slideshow-wrapper">
+      <div class="project-layout">
 
-      <!-- Main Image -->
-      <div class="main-slide">
+        <!-- DESCRIPTION: LEFT ON DESKTOP, TOP ON MOBILE -->
+        <div class="project-description">
 
-        <img
-          id="mainImage"
-          src="Pazey Pics/Pazey Pics/Giemer/before2.JPG"
-          alt="Structural Renewal Before"
-        >
+          <h2>Structural Renewal & Cottage Refresh</h2>
 
-        <!-- Caption -->
-        <div class="slide-caption">
-          <h2 id="slideTitle">BEFORE</h2>
-         
+          <p>
+            The goal of this project was to address structural concerns
+            within the home while creating a more comfortable, functional
+            and visually updated living space. Most importantly, the
+            homeowners wanted the peace of mind that came from knowing
+            the underlying floor and structure were properly repaired,
+            level and secure.
+          </p>
+
+          <p>
+            The renovation combined essential structural work with a
+            thoughtful interior refresh. The project included structural
+            repairs and floor levelling, improved insulation, new flooring,
+            a shiplap ceiling with pot lights and improvements to the guest
+            area. The existing fireplace was also transformed with a new
+            tiled surround, natural wood mantel and vertical shiplap,
+            creating a warm focal point for the home.
+          </p>
+
+          <p>
+            The result was a home that not only looked refreshed, but felt
+            more solid, comfortable and complete—bringing together form,
+            function and long-term peace of mind.
+          </p>
+
         </div>
 
-        <!-- Arrows -->
-        <button type="button" class="slide-arrow prev" onclick="changeSlide(-1)">
-          &#10094;
-        </button>
+        <!-- SLIDESHOW: RIGHT ON DESKTOP, BOTTOM ON MOBILE -->
+        <div class="project-slideshow">
 
-        <button type="button" class="slide-arrow next" onclick="changeSlide(1)">
-          &#10095;
-        </button>
+          <div class="slideshow-wrapper">
 
-      </div>
+            <!-- MAIN IMAGE -->
+            <div class="main-slide">
 
-      <!-- Thumbnail Preview -->
-      <div class="thumbnail-wrapper">
+              <img
+                id="mainImage"
+                src="Pazey Pics/Pazey Pics/Giemer/before2.jpeg"
+                alt="Home interior before structural renewal"
+              >
 
-        <div class="thumbnail active" onclick="showSlide(0)">
-          <img
-            src="Pazey Pics/Pazey Pics/Giemer/before2.JPEG"
-            alt="Structural Renewal Before"
-          >
-        </div>
+              <div class="slide-caption">
+                <h2 id="slideTitle">BEFORE</h2>
+              </div>
 
-        <div class="thumbnail" onclick="showSlide(1)">
-          <img
-            src="Pazey Pics/Pazey Pics/Giemer/structural-renewal.JPG"
-            alt="Structural Renewal Before"
-          >
-        </div>
+              <button
+                type="button"
+                class="slide-arrow prev"
+                onclick="changeSlide(-1)"
+                aria-label="Previous image"
+              >
+                &#10094;
+              </button>
 
-        <div class="thumbnail" onclick="showSlide(2)">
-          <img
-            src="Pazey Pics/Pazey Pics/Giemer/before3.JPG"
-            alt="Structural Renewal Before"
-          >
-        </div>
+              <button
+                type="button"
+                class="slide-arrow next"
+                onclick="changeSlide(1)"
+                aria-label="Next image"
+              >
+                &#10095;
+              </button>
 
-        <div class="thumbnail" onclick="showSlide(3)">
-          <img
-            src="Pazey Pics/Pazey Pics/Giemer/before4.JPG"
-            alt="Structural Renewal Before"
-          >
-        </div>
+            </div>
 
-        <div class="thumbnail" onclick="showSlide(4)">
-          <img
-            src="Pazey Pics/Pazey Pics/Giemer/spotlight-cottage.JPG"
-            alt="Structural Renewal After"
-          >
-        </div>
+            <!-- THUMBNAILS -->
+            <div class="thumbnail-wrapper">
 
-            <div class="thumbnail" onclick="showSlide(5)">
-          <img
-            src="Pazey Pics/Pazey Pics/Giemer/spotlight-transformation.JPG"
-            alt="Structural Renewal After"
-          >
-        </div>
+              <div class="thumbnail active" onclick="showSlide(0)">
+                <img
+                  src="Pazey Pics/Pazey Pics/Giemer/before2.jpeg"
+                  alt="Before renovation, image 1"
+                  loading="lazy"
+                >
+              </div>
 
-            <div class="thumbnail" onclick="showSlide(6)">
-          <img
-            src="Pazey Pics/Pazey Pics/Giemer/After 2.JPG"
-            alt="Structural Renewal After"
-          >
-        </div>
+              <div class="thumbnail" onclick="showSlide(1)">
+                <img
+                  src="Pazey Pics/Pazey Pics/Giemer/structural-renewal.jpg"
+                  alt="Structural renewal before renovation"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="thumbnail" onclick="showSlide(2)">
+                <img
+                  src="Pazey Pics/Pazey Pics/Giemer/before3.jpg"
+                  alt="Before renovation, image 3"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="thumbnail" onclick="showSlide(3)">
+                <img
+                  src="Pazey Pics/Pazey Pics/Giemer/before4.jpg"
+                  alt="Before renovation, image 4"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="thumbnail" onclick="showSlide(4)">
+                <img
+                  src="Pazey Pics/Pazey Pics/Giemer/spotlight-cottage.jpg"
+                  alt="Cottage after renovation, image 1"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="thumbnail" onclick="showSlide(5)">
+                <img
+                  src="Pazey Pics/Pazey Pics/Giemer/spotlight-transformation.jpg"
+                  alt="Completed cottage transformation"
+                  loading="lazy"
+                >
+              </div>
 
               <div class="thumbnail" onclick="showSlide(6)">
-          <img
-            src="Pazey Pics/Pazey Pics/Giemer/After 3.JPG"
-            alt="Structural Renewal After"
-          >
-        </div>
+                <img
+                  src="Pazey Pics/Pazey Pics/Giemer/After 2.jpg"
+                  alt="Renovated interior, image 2"
+                  loading="lazy"
+                >
+              </div>
 
-             <div class="thumbnail" onclick="showSlide(6)">
-          <img
-            src="Pazey Pics/Pazey Pics/Giemer/After 4.JPG"
-            alt="Structural Renewal After"
-          >
-        </div>
+              <div class="thumbnail" onclick="showSlide(7)">
+                <img
+                  src="Pazey Pics/Pazey Pics/Giemer/After 3.jpg"
+                  alt="Renovated interior, image 3"
+                  loading="lazy"
+                >
+              </div>
 
-             <div class="thumbnail" onclick="showSlide(6)">
-          <img
-            src="Pazey Pics/Pazey Pics/Giemer/After 5.JPG"
-            alt="Structural Renewal After"
-          >
-        </div>
+              <div class="thumbnail" onclick="showSlide(8)">
+                <img
+                  src="Pazey Pics/Pazey Pics/Giemer/After 4.jpg"
+                  alt="Renovated interior, image 4"
+                  loading="lazy"
+                >
+              </div>
 
-             <div class="thumbnail" onclick="showSlide(6)">
-          <img
-            src="Pazey Pics/Pazey Pics/Giemer/After 6.JPG"
-            alt="Structural Renewal After"
-          >
-        </div>
+              <div class="thumbnail" onclick="showSlide(9)">
+                <img
+                  src="Pazey Pics/Pazey Pics/Giemer/After 5.jpg"
+                  alt="Renovated interior, image 5"
+                  loading="lazy"
+                >
+              </div>
 
+              <div class="thumbnail" onclick="showSlide(10)">
+                <img
+                  src="Pazey Pics/Pazey Pics/Giemer/After 6.jpg"
+                  alt="Renovated interior, image 6"
+                  loading="lazy"
+                >
+              </div>
 
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<div class="request-form design-build-cta">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-
-        <div class="design-build-content">
-
-          <h4>The goal of this project was to address structural concerns within the home while creating a more comfortable, functional and visually updated living space. Most importantly, the homeowners wanted the peace of mind that came from knowing the underlying floor and structure were properly repaired, level and secure. 
-
-The renovation combined essential structural work with a thoughtful interior refresh. The project included structural repairs and floor levelling, improved insulation, new flooring, a shiplap ceiling with pot lights and improvements to the guest area. The existing fireplace was also transformed with a new tiled surround, natural wood mantel and vertical shiplap, creating a warm focal point for the home. 
-
-The result was a home that not only looked refreshed, but felt more solid, comfortable and complete—bringing together form, function and long-term peace of mind.</h4>
-
-         
-
-        </div>
-
-      </div>
-    </div>
-    </div>
-    </div>
-
-
-
-   
-
-    <!-- Footer Starts Here -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 footer-item">
-            <img src="spotlight logo.JPG" alt="Spotlight Logo" style="max-width: 200px; max-height: 250px;">
-            <p>Design | Renovate | Build</p>
-<ul class="social-icons">
-  <li>
-    <a rel="nofollow" href="https://www.facebook.com/spotlighthomeandlifestyle" target="_blank">
-      <i class="fa fa-facebook"></i>
-    </a>
-  </li>
-
-  <li>
-    <a href="https://www.instagram.com/spotlighthomeandlifestyle?stkn=MXFjdmdoZDBtM3pxMg==">
-      <i class="fa fa-instagram"></i>
-    </a>
-  </li>
-
-  <li>
-    <a href="https://share.google/CDrPjOCN7Ba2OfGo3">
-      <i class="fa fa-google"></i>
-    </a>
-  </li>
-
-
-
-
-
-             
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item">
-            <h4>Menu</h4>
-            <ul class="menu-list">
-              <li><a href="about-spotlight.html">About</a></li>
-              <li><a href="spotlight-projects.html">Portfolio</a></li>
-              <li><a href="spotlight-team.html">Our Team</a></li>
-              <li><a href="spotlight-testimonials.html">Testimonials</a></li>
-              <li><a href="contact-spotlight.html">Contact</a></li>
-            </ul>
-          </div>
-
-     
             </div>
           </div>
         </div>
+
       </div>
-    </footer>
-    
-    <div class="sub-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>Copyright &copy; Spotlight Home & Lifestyle 
-            
-            - Design: Pazey Coding</a></p>
-          </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-3 footer-item">
+          <img
+            src="spotlight logo.JPG"
+            alt="Spotlight Home & Lifestyle logo"
+            style="max-width: 200px; max-height: 250px;"
+          >
+
+          <p>Design | Renovate | Build</p>
+
+          <ul class="social-icons">
+
+            <li>
+              <a
+                rel="nofollow"
+                href="https://www.facebook.com/spotlighthomeandlifestyle"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.instagram.com/spotlighthomeandlifestyle?stkn=MXFjdmdoZDBtM3pxMg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i class="fa fa-instagram"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://share.google/CDrPjOCN7Ba2OfGo3"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Google"
+              >
+                <i class="fa fa-google"></i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="col-md-3 footer-item">
+          <h4>Menu</h4>
+
+          <ul class="menu-list">
+            <li><a href="about-spotlight.html">About</a></li>
+            <li><a href="spotlight-projects.html">Portfolio</a></li>
+            <li><a href="spotlight-team.html">Our Team</a></li>
+            <li><a href="spotlight-testimonials.html">Testimonials</a></li>
+            <li><a href="contact-spotlight.html">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- COPYRIGHT -->
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+            Copyright &copy; Spotlight Home & Lifestyle
+            - Design: Pazey Coding
+          </p>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- JAVASCRIPT -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Additional Scripts -->
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/owl.js"></script>
-<script src="assets/js/slick.js"></script>
-<script src="assets/js/accordions.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/owl.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/accordions.js"></script>
 
-<script>
+  <!-- SLIDESHOW SCRIPT -->
+  <script>
+    const slides = [
+      {
+        image: "Pazey Pics/Pazey Pics/Giemer/before2.jpeg",
+        title: "BEFORE",
+        alt: "Home interior before structural renewal"
+      },
+      {
+        image: "Pazey Pics/Pazey Pics/Giemer/structural-renewal.jpg",
+        title: "BEFORE",
+        alt: "Structural renewal before renovation"
+      },
+      {
+        image: "Pazey Pics/Pazey Pics/Giemer/before3.jpg",
+        title: "BEFORE",
+        alt: "Home before renovation, view 3"
+      },
+      {
+        image: "Pazey Pics/Pazey Pics/Giemer/before4.jpg",
+        title: "BEFORE",
+        alt: "Home before renovation, view 4"
+      },
+      {
+        image: "Pazey Pics/Pazey Pics/Giemer/spotlight-cottage.jpg",
+        title: "AFTER",
+        alt: "Cottage after structural renewal"
+      },
+      {
+        image: "Pazey Pics/Pazey Pics/Giemer/spotlight-transformation.jpg",
+        title: "AFTER",
+        alt: "Completed cottage transformation"
+      },
+      {
+        image: "Pazey Pics/Pazey Pics/Giemer/After 2.jpg",
+        title: "AFTER",
+        alt: "Renovated interior, view 2"
+      },
+      {
+        image: "Pazey Pics/Pazey Pics/Giemer/After 3.jpg",
+        title: "AFTER",
+        alt: "Renovated interior, view 3"
+      },
+      {
+        image: "Pazey Pics/Pazey Pics/Giemer/After 4.jpg",
+        title: "AFTER",
+        alt: "Renovated interior, view 4"
+      },
+      {
+        image: "Pazey Pics/Pazey Pics/Giemer/After 5.jpg",
+        title: "AFTER",
+        alt: "Renovated interior, view 5"
+      },
+      {
+        image: "Pazey Pics/Pazey Pics/Giemer/After 6.jpg",
+        title: "AFTER",
+        alt: "Renovated interior, view 6"
+      }
+    ];
 
-const slides = [
-  {
-    image: "Pazey Pics/Pazey Pics/Giemer/before2.JPEG",
-    title: "BEFORE"
-  },
-  {
-    image: "Pazey Pics/Pazey Pics/Giemer/structural-renewal.JPG",
-    title: "BEFORE"
-  },
-  {
-    image: "Pazey Pics/Pazey Pics/Giemer/before3.JPG",
-    title: "BEFORE"
-  },
-  {
-    image: "Pazey Pics/Pazey Pics/Giemer/before4.JPG",
-    title: "BEFORE"
-  },
-  {
-    image: "Pazey Pics/Pazey Pics/Giemer/spotlight-cottage.JPG",
-    title: "AFTER"
-  },
-  {
-    image: "Pazey Pics/Pazey Pics/Giemer/spotlight-transformation.JPG",
-    title: "AFTER"
-  },
-  {
-    image: "Pazey Pics/Pazey Pics/Giemer/After 2.JPG",
-    title: "AFTER"
-  },
-  {
-    image: "Pazey Pics/Pazey Pics/Giemer/After 3.JPG",
-    title: "AFTER"
-  },
-    {
-    image: "Pazey Pics/Pazey Pics/Giemer/After 4.JPG",
-    title: "AFTER"
-  },
-    {
-    image: "Pazey Pics/Pazey Pics/Giemer/After 5.JPG",
-    title: "AFTER"
-  },
-    {
-    image: "Pazey Pics/Pazey Pics/Giemer/After 6.JPG",
-    title: "AFTER"
-  },
-];
+    let currentSlide = 0;
 
-let currentSlide = 0;
+    function showSlide(index) {
+      if (index < 0) {
+        index = slides.length - 1;
+      }
 
-function showSlide(index) {
+      if (index >= slides.length) {
+        index = 0;
+      }
 
-  if (index < 0) {
-    index = slides.length - 1;
-  }
+      currentSlide = index;
 
-  if (index >= slides.length) {
-    index = 0;
-  }
+      const mainImage = document.getElementById("mainImage");
+      const slideTitle = document.getElementById("slideTitle");
+      const thumbnails = document.querySelectorAll(".thumbnail");
 
-  currentSlide = index;
+      mainImage.src = slides[index].image;
+      mainImage.alt = slides[index].alt;
+      slideTitle.textContent = slides[index].title;
 
-  const mainImage = document.getElementById("mainImage");
-  const slideTitle = document.getElementById("slideTitle");
-  const thumbnails = document.querySelectorAll(".thumbnail");
+      thumbnails.forEach(function(thumbnail, thumbnailIndex) {
+        thumbnail.classList.toggle(
+          "active",
+          thumbnailIndex === index
+        );
+      });
+    }
 
-  mainImage.src = slides[index].image;
-  mainImage.alt = slides[index].title;
-  slideTitle.textContent = slides[index].title;
+    function changeSlide(direction) {
+      showSlide(currentSlide + direction);
+    }
 
-  thumbnails.forEach(function(thumbnail) {
-    thumbnail.classList.remove("active");
-  });
+    document.addEventListener("DOMContentLoaded", function() {
+      showSlide(0);
+    });
+  </script>
 
-  if (thumbnails[index]) {
-    thumbnails[index].classList.add("active");
-  }
-}
-
-function changeSlide(direction) {
-  showSlide(currentSlide + direction);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  showSlide(0);
-});
-
-</script>
-
-  </body>
+</body>
 </html>
