@@ -2641,4 +2641,83 @@ gap: 10px;
     z-index: 10;
     display: block;
 }
+/* =========================================
+   VALUES SECTION - DESKTOP BACKGROUND
+========================================= */
+
+.about-values {
+  position: relative;
+  background-image:
+    linear-gradient(rgba(20, 45, 32, 0.48), rgba(20, 45, 32, 0.48)),
+    url("../../spotlight-values.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+/* Keep content above the background */
+.about-values .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section heading */
+.about-values .section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.about-values .section-heading h2,
+.about-values .section-heading span {
+  color: #ffffff;
+}
+
+/* Value cards */
+.about-values .value-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 6px;
+  padding: 35px 30px;
+  margin-bottom: 30px;
+  height: calc(100% - 30px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-values .value-card h4 {
+  color: #244b35;
+}
+
+.about-values .value-card p {
+  color: #555555;
+  line-height: 1.8;
+}
+
+/* =========================================
+   MOBILE BACKGROUND
+========================================= */
+
+@media (max-width: 767px) {
+  .about-values {
+    background-image:
+      linear-gradient(rgba(20, 45, 32, 0.52), rgba(20, 45, 32, 0.52)),
+      url("../../values-mobile.png");
+
+    background-size: cover;
+    background-position: center center;
+    padding: 65px 0 40px;
+  }
+
+  .about-values .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .about-values .value-card {
+    padding: 28px 22px;
+    margin-bottom: 20px;
+    height: auto;
+  }
+}
+
+
 
