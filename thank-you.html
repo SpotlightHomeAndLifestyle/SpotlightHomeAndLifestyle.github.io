@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Thank you for contacting Spotlight Home & Lifestyle. We look forward to discussing your renovation or construction project.">
+
+  <meta name="robots" content="noindex, follow">
+
+  <title>Thank You | Spotlight Home & Lifestyle</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --spotlight-green: #828C65;
+      --spotlight-green-dark: #68734F;
+      --spotlight-cream: #F7F6F1;
+      --spotlight-white: #FFFFFF;
+      --spotlight-charcoal: #292B27;
+      --spotlight-muted: #74766F;
+      --spotlight-border: #E5E4DC;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--spotlight-charcoal);
+      background: var(--spotlight-cream);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+
+    .site-header {
+      width: 100%;
+      padding: 26px 7%;
+      border-bottom: 1px solid var(--spotlight-border);
+      background: var(--spotlight-cream);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand {
+      color: var(--spotlight-charcoal);
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .brand-name {
+      display: block;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .brand-subtitle {
+      display: block;
+      margin-top: 7px;
+      font-size: 9px;
+      letter-spacing: 4px;
+      color: var(--spotlight-green-dark);
+    }
+
+    /* Main thank-you section */
+
+    .thank-you-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .thank-you-section::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(130, 140, 101, 0.13);
+      border-radius: 50%;
+      top: -250px;
+      right: -140px;
+      pointer-events: none;
+    }
+
+    .thank-you-section::after {
+      content: "";
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border: 1px solid rgba(130, 140, 101, 0.13);
+      border-radius: 50%;
+      bottom: -220px;
+      left: -100px;
+      pointer-events: none;
+    }
+
+    .thank-you-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 760px;
+      padding: 65px 55px;
+      text-align: center;
+      background: var(--spotlight-white);
+      border: 1px solid var(--spotlight-border);
+      box-shadow: 0 18px 55px rgba(41, 43, 39, 0.045);
+    }
+
+    .success-icon {
+      width: 66px;
+      height: 66px;
+      margin: 0 auto 30px;
+      border: 1px solid rgba(130, 140, 101, 0.55);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--spotlight-green-dark);
+      font-size: 29px;
+      font-weight: 400;
+    }
+
+    .eyebrow {
+      color: var(--spotlight-green-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(36px, 5vw, 54px);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+      margin-bottom: 24px;
+    }
+
+    .thank-you-message {
+      max-width: 510px;
+      margin: 0 auto;
+      color: var(--spotlight-muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .thank-you-message strong {
+      color: var(--spotlight-charcoal);
+      font-weight: 600;
+    }
+
+    .divider {
+      width: 55px;
+      height: 2px;
+      background: var(--spotlight-green);
+      margin: 32px auto;
+    }
+
+    .next-steps {
+      color: var(--spotlight-muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    /* Homepage button */
+
+    .home-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 54px;
+      padding: 0 30px;
+      background: var(--spotlight-green);
+      border: 1px solid var(--spotlight-green);
+      color: var(--spotlight-white);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: background 0.25s ease,
+                  border-color 0.25s ease,
+                  transform 0.25s ease;
+    }
+
+    .home-button:hover {
+      background: var(--spotlight-green-dark);
+      border-color: var(--spotlight-green-dark);
+      transform: translateY(-2px);
+    }
+
+    .home-button:focus-visible {
+      outline: 3px solid var(--spotlight-charcoal);
+      outline-offset: 4px;
+    }
+
+    .button-arrow {
+      font-size: 17px;
+      line-height: 1;
+      transition: transform 0.25s ease;
+    }
+
+    .home-button:hover .button-arrow {
+      transform: translateX(-3px);
+    }
+
+    .brand-tagline {
+      margin-top: 36px;
+      color: var(--spotlight-muted);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+    }
+
+    .brand-tagline span {
+      color: var(--spotlight-green);
+      padding: 0 5px;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 22px 20px;
+      border-top: 1px solid var(--spotlight-border);
+      text-align: center;
+      background: var(--spotlight-cream);
+    }
+
+    .site-footer p {
+      color: var(--spotlight-muted);
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .site-footer a {
+      color: var(--spotlight-green-dark);
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 600px) {
+      .site-header {
+        padding: 22px 16px;
+      }
+
+      .brand-name {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+
+      .brand-subtitle {
+        font-size: 8px;
+        letter-spacing: 3px;
+      }
+
+      .thank-you-section {
+        padding: 45px 18px 55px;
+      }
+
+      .thank-you-card {
+        padding: 45px 23px;
+      }
+
+      .success-icon {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 25px;
+      }
+
+      .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .thank-you-message {
+        font-size: 14px;
+      }
+
+      .home-button {
+        width: 100%;
+        max-width: 300px;
+        padding: 0 18px;
+        font-size: 10px;
+      }
+
+      .brand-tagline {
+        font-size: 9px;
+        letter-spacing: 2px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <main class="thank-you-section">
+    <section class="thank-you-card" aria-labelledby="thank-you-title">
+
+      <div class="success-icon" aria-hidden="true">
+        &#10003;
+      </div>
+
+      <p class="eyebrow">Your message is on its way</p>
+
+      <h1 id="thank-you-title">Thank You for Reaching Out</h1>
+
+      <p class="thank-you-message">
+        Thank you for considering
+        <strong>Spotlight Home &amp; Lifestyle</strong>
+        for your project. Your consultation request has been submitted
+        and our team will review the details you provided.
+      </p>
+
+      <div class="divider"></div>
+
+      <p class="next-steps">
+        We look forward to learning more about your vision
+        and discussing how we can bring it to life.
+      </p>
+
+      <a class="home-button" href="index.html">
+        <span class="button-arrow" aria-hidden="true">&#8592;</span>
+        Go Back to Website
+      </a>
+
+      <p class="brand-tagline">
+        DESIGN <span>|</span> RENOVATE <span>|</span> BUILD
+      </p>
+
+    </section>
+  </main>
+
+
+
+  <script>
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
